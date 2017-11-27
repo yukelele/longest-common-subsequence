@@ -62,10 +62,10 @@ int main(int argc, char* argv[]){
         for(auto col_iter : row_iter){
           result += "<" + to_string(col_iter.first) + ", " + to_string(col_iter.second) + ">, "; 
         }
-        result.pop_back();
-        result.pop_back();
-        if(result == "")
-          result = "(";
+        if(result != "("){
+          result.pop_back();
+          result.pop_back();
+        }
         result += ")\n";
       }
       cout << result << endl;

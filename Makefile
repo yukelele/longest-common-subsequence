@@ -8,4 +8,4 @@ findLCS: findLCS.o
 	${CXX} $^ -o $@
 
 clean: 
-	/bin/rm -f findLCS test_cases/#* *.o *~
+	/bin/rm -f findLCS test_cases/#* test_cases/*~ *.o *~

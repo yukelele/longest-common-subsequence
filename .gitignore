@@ -2,6 +2,7 @@ findLCS
 *.o 
 *~
 test_cases/#*
+test_cases/*~
 
 # Prerequisites
 *.d
