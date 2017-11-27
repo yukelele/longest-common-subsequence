@@ -64,6 +64,8 @@ int main(int argc, char* argv[]){
         }
         result.pop_back();
         result.pop_back();
+        if(result == "")
+          result = "(";
         result += ")\n";
       }
       cout << result << endl;
@@ -149,8 +151,7 @@ vector<vector<pair<int,int>>> find_all_LCS(vector<vector<int>> c, string x, stri
     }
     up.insert(up.end(), left.begin(), left.end());
 
-    vector<vector<pair<int,int>>>::iterator it = lcs.begin();
-    for(it; it!=lcs.end(); ++it){
+    for(vector<vector<pair<int,int>>>::iterator it=lcs.begin(); it!=lcs.end(); ++it){
       pair<int,int> p = make_pair(row-1, col-1);
       it->push_back(p);
     }
